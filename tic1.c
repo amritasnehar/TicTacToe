@@ -203,7 +203,55 @@ void logic2(int l) // player 2 logic
 
         return;
     }
+if(ch[0]=='X'&&ch[3]=='X'&&ch[6]=='X')
 
+    {
+
+        printf("\nPlayer 2 Won!!!");
+
+        ge=0;
+
+        return;
+
+    }
+
+     if(ch[1]=='X'&&ch[4]=='X'&&ch[7]=='X')
+
+    {
+
+        printf("\nPlayer 2 Won!!!");
+
+        ge=0;
+
+        return;
+
+    }
+
+     if(ch[2]=='X'&&ch[5]=='X'&&ch[8]=='X')
+
+    {
+
+        printf("\nPlayer 2 Won!!!");
+
+        ge=0;
+
+        return;
+
+    }
+
+     if(ch[0]=='X'&&ch[4]=='X'&&ch[8]=='X')
+
+     {
+
+
+        printf("\nPlayer 2 Won!!!");
+
+        ge=0;
+
+        return;
+
+    }
+    
 
 
 
