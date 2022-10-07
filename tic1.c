@@ -71,7 +71,138 @@ void tie()// for checking tie or draw
 
 
     }
+}
 
+void logic1(int l) // player 1 logic
+
+{
+
+    ch[l] = 'O';
+
+    draw(ch);
+
+    if (ch[0] == 'O' && ch[1] == 'O' && ch[2] == 'O')
+
+    {
+
+        printf("\nPlayer 1 Won!!!");
+
+        ge = 0;
+
+        return;
+    }
+
+    if (ch[3] == 'O' && ch[4] == 'O' && ch[5] == 'O')
+
+    {
+
+        printf("\nPlayer 1 Won!!!");
+
+        ge = 0;
+        return;
+    }
+
+    if (ch[6] == 'O' && ch[7] == 'O' && ch[8] == 'O')
+
+    {
+
+        printf("\nPlayer 1 Won!!!");
+
+        ge = 0;
+        return;
+    }
+
+    if (ch[0] == 'O' && ch[3] == 'O' && ch[6] == 'O')
+
+    {
+
+        printf("\nPlayer 1 Won!!!");
+
+        ge = 0;
+        return;
+    }
+
+    if (ch[1] == 'O' && ch[4] == 'O' && ch[7] == 'O')
+
+    {
+
+        printf("\nPlayer 1 Won!!!");
+
+        ge = 0;
+        return;
+    }
+
+    if (ch[2] == 'O' && ch[5] == 'O' && ch[8] == 'O')
+
+    {
+
+        printf("\nPlayer 1 Won!!!");
+
+        ge = 0;
+        return;
+    }
+
+    if (ch[0] == 'O' && ch[4] == 'O' && ch[8] == 'O')
+
+    {
+
+        printf("\nPlayer 1 Won!!!");
+
+        ge = 0;
+        return;
+    }
+
+    if (ch[2] == 'O' && ch[4] == 'O' && ch[6] == 'O')
+
+    {
+
+        printf("\nPlayer 1 Won!!!");
+
+        ge = 0;
+        return;
+    }
+}
+
+void logic2(int l) // player 2 logic
+
+{
+
+    ch[l] = 'X';
+
+    draw(ch);
+
+    if (ch[0] == 'X' && ch[1] == 'X' && ch[2] == 'X')
+
+    {
+
+        printf("\nPlayer 2 Won!!!");
+
+        ge = 0;
+
+        return;
+    }
+
+    if (ch[3] == 'X' && ch[4] == 'X' && ch[5] == 'X')
+
+    {
+
+        printf("\nPlayer 2 Won!!!");
+
+        ge = 0;
+
+        return;
+    }
+
+    if (ch[6] == 'X' && ch[7] == 'X' && ch[8] == 'X')
+
+    {
+
+        printf("\nPlayer 2 Won!!!");
+
+        ge = 0;
+
+        return;
+    }
 
 
 
