@@ -252,7 +252,3257 @@ if(ch[0]=='X'&&ch[3]=='X'&&ch[6]=='X')
 
     }
     
+ if(ch[2]=='X'&&ch[4]=='X'&&ch[6]=='X')
 
+    {
+
+        printf("\nPlayer 2 Won!!!");
+
+        ge=0;
+
+        return;
+
+    }
+
+}
+
+void draw(char x[9]) // for drawing basic structure of tic tac toe
+
+{
+
+    system("cls");
+
+     printf("\n\t\t\t T i c     T a c    T o e");
+
+    printf("\n Player 1 : O");
+
+    printf("\n Player 2 : X");
+
+    printf("\n\t\t\t   |   |     ");
+
+    printf("\n\t\t\t %c | %c | %c  ",x[0],x[1],x[2]);
+
+    printf("\n\t\t\t---+---+---");
+
+    printf("\n\t\t\t   |   |     ");
+
+    printf("\n\t\t\t %c | %c | %c  ",x[3],x[4],x[5]);
+
+    printf("\n\t\t\t   |   |     ");
+
+    printf("\n\t\t\t---+---+---");
+
+    printf("\n\t\t\t %c | %c | %c  ",x[6],x[7],x[8]);
+
+    printf("\n\t\t\t   |   |     \n\n");
+
+}
+
+void draw2(char x[9])//for drawing basic structure of tic tac toe for computer mode
+
+{
+
+    system("cls");
+
+     printf("\n\t\t\t T i c     T a c    T o e");
+
+    printf("\n Player 1 : O");
+
+    printf("\n Computer : X");
+
+    printf("\n\t\t\t   |   |     ");
+
+    printf("\n\t\t\t %c | %c | %c  ",x[0],x[1],x[2]);
+
+    printf("\n\t\t\t---+---+---");
+
+    printf("\n\t\t\t   |   |     ");
+
+    printf("\n\t\t\t %c | %c | %c  ",x[3],x[4],x[5]);
+
+    printf("\n\t\t\t   |   |     ");
+
+    printf("\n\t\t\t---+---+---");
+
+    printf("\n\t\t\t %c | %c | %c  ",x[6],x[7],x[8]);
+
+    printf("\n\t\t\t   |   |     \n\n");
+
+}
+
+int turn=0,c,cr1,cr2,cr3,cr4,s1,s2,s3,s4,c_1,c_2,c_3,c_4,c_5,c_6,c_7,c__1,c__2,c__3,c__4,c__5;
+
+int s_1,s_2,s_3,s_4,s_5,s_6,s_7,cr_1,cr_2,cr_3,cr_4,cr_5,cr_6,cr_7;
+
+
+
+void tcomp()//computer logic
+
+{
+
+
+    switch(turn)
+
+    {
+
+     case 1:
+
+    {
+
+    if(ch[4]=='O')
+
+    {
+
+        c=1;
+
+         ch[8]='X';
+
+         draw2(ch);
+
+         return;
+
+    }
+
+    if(ch[0]=='O')
+
+    {
+
+        cr1=1;
+
+            ch[4]='X';
+
+            draw2(ch);
+
+            return;
+
+    }
+
+    if(ch[2]=='O')
+
+    {
+
+        cr2=1;
+
+            ch[4]='X';
+
+            draw2(ch);
+
+            return;
+
+    }
+
+    if(ch[6]=='O')
+
+    {
+
+        cr3=1;
+
+            ch[4]='X';
+
+            draw2(ch);
+
+            return;
+
+    }
+
+    if(ch[8]=='O')
+
+    {
+
+        cr4=1;
+
+            ch[4]='X';
+
+            draw2(ch);
+
+            return;
+
+    }
+
+    if(ch[1]=='O')
+
+    {
+
+            s1=1;
+
+            ch[4]='X';
+
+            draw2(ch);
+
+            return;
+
+    }
+
+    if(ch[3]=='O')
+
+    {
+
+            s2=1;
+
+            ch[4]='X';
+
+            draw2(ch);
+
+            return;
+
+    }
+
+    if(ch[5]=='O')
+
+    {
+
+            s3=1;
+
+            ch[4]='X';
+
+            draw2(ch);
+
+            return;
+
+    }
+
+    if(ch[7]=='O')
+
+    {
+
+            s4=1;
+
+            ch[4]='X';
+
+            draw2(ch);
+
+            return;
+
+    }
+
+    break;
+
+    }
+
+
+
+    case 3:
+
+    {
+
+
+        if(c==1)
+
+        {
+
+            if(ch[0]=='O')
+
+            {
+
+                ch[2]='X';
+
+                draw2(ch);
+
+                c_1=1;
+
+                return;
+
+
+
+            }
+
+            if(ch[1]=='O')
+
+            {
+
+                ch[7]='X';
+
+                draw2(ch);
+
+                c_2=1;
+
+                return;
+
+            }
+
+            if(ch[2]=='O')
+
+            {
+
+                ch[6]='X';
+
+                draw2(ch);
+
+                c_3=1;
+
+                return;
+
+            }
+
+            if(ch[3]=='O')
+
+            {
+
+                ch[5]='x';
+
+                draw2(ch);
+
+                c_4=1;
+
+                return;
+
+            }
+
+            if(ch[5]=='O')
+
+            {
+
+                ch[3]='X';
+
+                draw2(ch);
+
+                c_5=1;
+
+                return;
+
+            }
+
+            if(ch[6]=='O')
+
+            {
+
+                ch[2]='X';
+
+                draw2(ch);
+
+                c_6=1;
+
+                return;
+
+            }
+
+            if(ch[7]=='O')
+
+            {
+
+                ch[1]='X';
+
+                draw2(ch);
+
+                c_7=1;
+
+                return;
+
+            }
+
+        }
+
+
+         if(s1==1)
+
+        {
+
+            if(ch[7]=='O')
+
+            {
+
+                s_1=1;
+
+                ch[3]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[0]=='O')
+
+            {
+
+                s_2=1;
+
+                ch[2]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[2]=='O')
+
+            {
+
+                s_3=1;
+
+                ch[0]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[3]=='O')
+
+            {
+
+                s_4=1;
+
+                ch[0]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[5]=='O')
+
+            {
+
+                s_5=1;
+
+                ch[2]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[6]=='O')
+
+            {
+
+                s_6=1;
+
+                ch[0]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[8]=='O')
+
+            {
+
+                s_7=1;
+
+                ch[5]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+        }
+
+
+        if(s2==1)
+
+        {
+
+            if(ch[0]=='O')
+
+            {
+
+                s_1=1;
+
+                ch[6]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[1]=='O')
+
+            {
+
+                s_2=1;
+
+                ch[0]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[2]=='O')
+
+            {
+
+                s_3=1;
+
+                ch[0]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[5]=='O')
+
+            {
+
+                s_4=1;
+
+                ch[0]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[6]=='O')
+
+            {
+
+                s_5=1;
+
+                ch[0]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[7]=='O')
+
+            {
+
+
+                s_6=1;
+
+                ch[6]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[8]=='O')
+
+            {
+
+                s_7=1;
+
+                ch[1]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+
+        }
+
+
+        if(s3==1)
+
+        {
+
+            if(ch[0]=='O')
+
+            {
+
+                s_1=1;
+
+                ch[1]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[1]=='O')
+
+            {
+
+                s_2=1;
+
+                ch[2]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[2]=='O')
+
+            {
+
+                s_3=1;
+
+                ch[8]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[3]=='O')
+
+            {
+
+                s_4=1;
+
+                ch[8]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[6]=='O')
+
+            {
+
+                s_5=1;
+
+                ch[1]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[7]=='O')
+
+            {
+
+                s_6=1;
+
+                ch[8]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[8]=='O')
+
+            {
+
+                s_7=1;
+
+                ch[2]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+
+        }
+
+
+        if(s4==1)
+
+        {
+
+            if(ch[0]=='O')
+
+            {
+
+                s_1=1;
+
+                ch[3]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[1]=='O')
+
+            {
+
+                s_2=1;
+
+                ch[6]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[2]=='O')
+
+            {
+
+                s_3=1;
+
+                ch[8]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[3]=='O')
+
+            {
+
+                s_4=1;
+
+                ch[6]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[5]=='O')
+
+            {
+
+                s_5=1;
+
+                ch[8]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[6]=='O')
+
+            {
+
+                s_6=1;
+
+                ch[8]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[8]=='O')
+
+            {
+
+                s_7=1;
+
+                ch[6]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+
+        }
+
+
+        if(cr1==1)
+
+        {
+
+            if(ch[1]=='O')
+
+            {
+
+                cr_1=1;
+
+                ch[2]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[2]=='O')
+
+            {
+
+                cr_2=1;
+
+                ch[1]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[3]=='O')
+
+            {
+
+                cr_3=1;
+
+                ch[6]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[5]=='O')
+
+            {
+
+                cr_4=1;
+
+                ch[1]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[6]=='O')
+
+            {
+
+                cr_5=1;
+
+                ch[3]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[7]=='O')
+
+            {
+
+                cr_6=1;
+
+                ch[3]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[8]=='O')
+
+            {
+
+                cr_7=1;
+
+                ch[3]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+
+        }
+
+
+        if(cr2==1)
+
+        {
+
+            if(ch[0]=='O')
+
+            {
+
+                cr_1=1;
+
+                ch[1]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[1]=='O')
+
+            {
+
+                cr_2=1;
+
+                ch[0]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[3]=='O')
+
+            {
+
+                cr_3=1;
+
+                ch[1]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[5]=='O')
+
+            {
+
+                cr_4=1;
+
+                ch[8]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[6]=='O')
+
+            {
+
+                cr_5=1;
+
+                ch[7]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[7]=='O')
+
+            {
+
+                cr_6=1;
+
+                ch[5]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[8]=='O')
+
+            {
+
+                cr_7=1;
+
+                ch[5]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+
+        }
+
+
+        if(cr3==1)
+
+        {
+
+            if(ch[0]=='O')
+
+            {
+
+                cr_1=1;
+
+                ch[0]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[1]=='O')
+
+            {
+
+                cr_2=1;
+
+                ch[1]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[2]=='O')
+
+            {
+
+                cr_3=1;
+
+                ch[2]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[3]=='O')
+
+            {
+
+                cr_4=1;
+
+                ch[0]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[5]=='O')
+
+            {
+
+                cr_5=1;
+
+                ch[8]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[7]=='O')
+
+            {
+
+                cr_6=1;
+
+                ch[8]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[8]=='O')
+
+            {
+
+                cr_7=1;
+
+                ch[7]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+
+        }
+
+
+        if(cr4==1)
+
+        {
+
+            if(ch[0]=='O')
+
+            {
+
+                cr_1=1;
+
+                ch[1]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[1]=='O')
+
+            {
+
+                cr_2=1;
+
+                ch[5]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[2]=='O')
+
+            {
+
+                cr_3=1;
+
+                ch[5]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[3]=='O')
+
+            {
+
+                cr_4=1;
+
+                ch[7]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[5]=='O')
+
+            {
+
+                cr_5=1;
+
+                ch[2]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[6]=='O')
+
+            {
+
+                cr_6=1;
+
+                ch[7]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+            if(ch[7]=='O')
+
+            {
+
+                cr_7=1;
+
+                ch[6]='X';
+
+                draw2(ch);
+
+                return;
+
+            }
+
+
+        }
+
+
+    }
+
+    case 5:
+
+    {
+
+
+        if(c==1)
+
+        {
+
+            if(c_1==1)
+
+            {
+
+                if(ch[5]!='O')
+
+                {
+
+                    ch[5]='X';
+
+                    draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[5]=='O')
+
+                {
+
+                    ch[3]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+            }
+
+            if(c_2==1)
+
+            {
+
+                if(ch[6]!='O')
+
+                {
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[6]=='O')
+
+                {
+
+                    ch[2]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+            }
+
+            if(c_3==1)
+
+            {
+
+                if(ch[7]!='O')
+
+                {
+
+                    ch[7]='X';
+
+                    draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[7]=='O')
+
+                {
+
+                    ch[1]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(c_4==1)
+
+            {
+
+                if(ch[2]!='O')
+
+                {
+
+                    ch[2]='X';
+
+                    draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[2]=='O')
+
+                {
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+            }
+
+            if(c_5==1)
+
+            {
+
+                if(ch[0]=='O')
+
+                {
+
+                    c__5=1;
+
+                    ch[7]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+                if(ch[1]=='O')
+
+                {
+
+                    c__1=1;
+
+                    ch[7]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+                if(ch[7]=='O')
+
+                {
+
+                    c__2=1;
+
+                    ch[1]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+                if(ch[2]=='O')
+
+                {
+
+                    c__3=1;
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+                if(ch[6]=='O')
+
+                {
+
+                    c__4=1;
+
+                    ch[2]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+            }
+
+            if(c_6==1)
+
+            {
+
+                if(ch[5]!='O')
+
+                {
+
+                    ch[5]='X';
+
+                    draw2(ch);
+
+                        printf("Computer wins !!!!");
+
+                        ge=0;
+
+                        return;
+
+                }
+
+                if(ch[5]=='O')
+
+                {
+
+                    ch[3]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(c_7==1)
+
+            {
+
+                if(ch[0]=='O')
+
+                {
+
+                    c__1=1;
+
+                    ch[2]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+                if(ch[2]=='O')
+
+                {
+
+                    c__2=1;
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+                if(ch[3]=='O')
+
+                {
+
+                    c__3=1;
+
+                    ch[5]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+                if(ch[5]=='O')
+
+                {
+
+                    c__4=1;
+
+                    ch[3]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+                if(ch[6]=='O')
+
+                {
+
+                    c__5=1;
+
+                    ch[2]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+
+        }
+
+         if(s1==1)
+
+        {
+
+            if(s_1==1)
+
+            {
+
+                if(ch[5]!='O')
+
+                {
+
+                    ch[5]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[5]=='O')
+
+                {
+
+                    ch[0]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_2==1)
+
+            {
+
+                if(ch[6]!='O')
+
+                {
+
+                    ch[6]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[6]=='O')
+
+                {
+
+                    ch[3]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+            }
+
+            if(s_3==1)
+
+            {
+
+                if(ch[8]!='O')
+
+                {
+
+                    ch[8]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[8]=='O')
+
+                {
+
+                    ch[5]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_4==1)
+
+            {
+
+                if(ch[8]!='O')
+
+                {
+
+                    ch[8]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[8]=='O')
+
+                {
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_5==1)
+
+            {
+
+                if(ch[6]!='O')
+
+                {
+
+                    ch[6]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[6]=='O')
+
+                {
+
+                    ch[0]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_6==1)
+
+            {
+
+                if(ch[8]!='O')
+
+                {
+
+                    ch[8]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[8]=='O')
+
+                {
+
+                    ch[7]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_7==1)
+
+            {
+
+                if(ch[3]!='O')
+
+                {
+
+                    ch[3]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[3]=='O')
+
+                {
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+
+        }
+
+
+        if(s2==1)
+
+        {
+
+            if(s_1==1)
+
+            {
+
+                if(ch[2]!='O')
+
+                {
+
+                    ch[2]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[2]=='O')
+
+                {
+
+                    ch[1]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_2==1)
+
+            {
+
+                if(ch[8]!='O')
+
+                {
+
+                    ch[8]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[8]=='O')
+
+                {
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+            }
+
+            if(s_3==1)
+
+            {
+
+                if(ch[8]!='O')
+
+                {
+
+                    ch[8]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[8]=='O')
+
+                {
+
+                    ch[5]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_4==1)
+
+            {
+
+                if(ch[8]!='O')
+
+                {
+
+                    ch[8]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[8]=='O')
+
+                {
+
+                    ch[2]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_5==1)
+
+            {
+
+                if(ch[8]!='O')
+
+                {
+
+                    ch[2]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[8]=='O')
+
+                {
+
+                    ch[7]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_6==1)
+
+            {
+
+                if(ch[2]!='O')
+
+                {
+
+                    ch[2]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[2]=='O')
+
+                {
+
+                    ch[8]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_7==1)
+
+            {
+
+                if(ch[7]!='O')
+
+                {
+
+                    ch[7]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[7]=='O')
+
+                {
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+
+        }
+
+
+        if(s3==1)
+
+        {
+
+            if(s_1==1)
+
+            {
+
+                if(ch[7]!='O')
+
+                {
+
+                    ch[7]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[7]=='O')
+
+                {
+
+                    ch[2]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_2==1)
+
+            {
+
+                if(ch[6]!='O')
+
+                {
+
+                    ch[6]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[6]=='O')
+
+                {
+
+                    ch[8]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_3==1)
+
+            {
+
+                if(ch[0]!='O')
+
+                {
+
+                    ch[0]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[0]=='O')
+
+                {
+
+                    ch[1]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_4==1)
+
+            {
+
+                if(ch[0]!='O')
+
+                {
+
+                    ch[0]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[0]=='O')
+
+                {
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_5==1)
+
+            {
+
+                if(ch[7]!='O')
+
+                {
+
+                    ch[7]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[7]=='O')
+
+                {
+
+                    ch[8]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_6==1)
+
+            {
+
+                if(ch[0]!='O')
+
+                {
+
+                    ch[0]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[0]=='O')
+
+                {
+
+                    ch[2]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_7==1)
+
+            {
+
+                if(ch[6]!='O')
+
+                {
+
+                    ch[6]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[6]=='O')
+
+                {
+
+                    ch[7]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+
+        }
+
+
+        if(s4==1)
+
+        {
+
+            if(s_1==1)
+
+            {
+
+                if(ch[5]!='O')
+
+                {
+
+                    ch[5]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[5]=='O')
+
+                {
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_2==1)
+
+            {
+
+                if(ch[2]!='O')
+
+                {
+
+                    ch[2]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[2]=='O')
+
+                {
+
+                    ch[0]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_3==1)
+
+            {
+
+                if(ch[0]!='O')
+
+                {
+
+                    ch[0]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[0]=='O')
+
+                {
+
+                    ch[1]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_4==1)
+
+            {
+
+                if(ch[2]!='O')
+
+                {
+
+                    ch[2]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[2]=='O')
+
+                {
+
+                    ch[0]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_5==1)
+
+            {
+
+                if(ch[0]!='O')
+
+                {
+
+                    ch[0]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[0]=='O')
+
+                {
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_6==1)
+
+            {
+
+                if(ch[0]!='O')
+
+                {
+
+                    ch[0]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[0]=='O')
+
+                {
+
+                    ch[3]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(s_7==1)
+
+            {
+
+                if(ch[2]!='O')
+
+                {
+
+                    ch[2]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[2]=='O')
+
+                {
+
+                    ch[5]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+
+        }
+
+
+        if(cr1==1)
+
+        {
+
+            if(cr_1==1)
+
+            {
+
+                if(ch[6]!='O')
+
+                {
+
+                    ch[6]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[6]=='O')
+
+                {
+
+                    ch[3]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+            }
+
+            if(cr_2==1)
+
+            {
+
+                if(ch[7]!='O')
+
+                {
+
+                    ch[7]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[7]=='O')
+
+                {
+
+                    ch[3]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_3==1)
+
+            {
+
+                if(ch[2]!='O')
+
+                {
+
+                    ch[2]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[2]=='O')
+
+                {
+
+                    ch[1]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_4==1)
+
+            {
+
+                if(ch[7]!='O')
+
+                {
+
+                    ch[7]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[7]=='O')
+
+                {
+
+                    ch[6]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_5==1)
+
+            {
+
+                if(ch[5]!='O')
+
+                {
+
+                    ch[5]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[5]=='O')
+
+                {
+
+                    ch[1]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_6==1)
+
+            {
+
+                if(ch[5]!='O')
+
+                {
+
+                    ch[5]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[5]=='O')
+
+                {
+
+                    ch[2]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_7==1)
+
+            {
+
+                if(ch[5]!='O')
+
+                {
+
+                    ch[5]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[5]=='O')
+
+                {
+
+                    ch[2]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+        }
+
+
+        if(cr2==1)
+
+        {
+
+            if(cr_1==1)
+
+            {
+
+                if(ch[7]!='O')
+
+                {
+
+                    ch[7]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[7]=='O')
+
+                {
+
+                    ch[3]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_2==1)
+
+            {
+
+                if(ch[8]!='O')
+
+                {
+
+                    ch[8]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[8]=='O')
+
+                {
+
+                    ch[5]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_3==1)
+
+            {
+
+                if(ch[7]!='O')
+
+                {
+
+                    ch[7]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[7]=='O')
+
+                {
+
+                    ch[0]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_4==1)
+
+            {
+
+                if(ch[0]!='O')
+
+                {
+
+                    ch[0]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[0]=='O')
+
+                {
+
+                    ch[1]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_5==1)
+
+            {
+
+                if(ch[1]!='O')
+
+                {
+
+                    ch[1]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[1]=='O')
+
+                {
+
+                    ch[0]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_6==1)
+
+            {
+
+                if(ch[3]!='O')
+
+                {
+
+                    ch[3]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[3]=='O')
+
+                {
+
+                    ch[0]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_7==1)
+
+            {
+
+                if(ch[3]!='O')
+
+                {
+
+                    ch[3]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[3]=='O')
+
+                {
+
+                    ch[1]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+        }
+
+
+        if(cr3==1)
+
+        {
+
+            if(cr_1==1)
+
+            {
+
+                if(ch[5]!='O')
+
+                {
+
+                    ch[5]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[5]=='O')
+
+                {
+
+                    ch[1]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_2==1)
+
+            {
+
+                if(ch[5]!='O')
+
+                {
+
+                    ch[5]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[5]=='O')
+
+                {
+
+                    ch[0]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_3==1)
+
+            {
+
+                if(ch[5]!='O')
+
+                {
+
+                    ch[5]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[5]=='O')
+
+                {
+
+                    ch[8]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_4==1)
+
+            {
+
+                if(ch[8]!='O')
+
+                {
+
+                    ch[8]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[8]=='O')
+
+                {
+
+                    ch[7]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_5==1)
+
+            {
+
+                if(ch[0]!='O')
+
+                {
+
+                    ch[0]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[0]=='O')
+
+                {
+
+                    ch[3]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
+
+
+            }
+
+            if(cr_6==1)
+
+            {
+
+                if(ch[0]!='O')
+
+                {
+
+                    ch[0]='X';
+
+                     draw2(ch);
+
+                    printf("Computer wins !!!!");
+
+                    ge=0;
+
+                    return;
+
+                }
+
+                if(ch[0]=='O')
+
+                {
+
+                    ch[3]='X';
+
+                    draw2(ch);
+
+                    return;
+
+                }
 
 
  
